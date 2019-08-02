@@ -52,4 +52,25 @@ void print(int arr[],int n){
 printf("\n");
 }
 
-
+int binary_s(int arr[],int a,int b,int x){
+    int c,flag=0;
+    while(a<=b)
+    {
+        c=(a+b)/2;
+ 
+        if(x==arr[c]){
+            flag=1;
+            break;
+        }
+        else
+            if(x>arr[c])
+                a=c+1;
+            else
+                b=c-1;
+    }
+ 
+    if(flag==1)
+        return (c);
+    else
+        return -1;
+}
