@@ -11,7 +11,6 @@ int main(int argc,char* argv[]){
 }
 int lcm(int arr[],int n){
 	int u=0,count=0;
-//	int size=sizeof(arr)/sizeof(arr[0]);
 	for(int j=arr[0];j<10000;j=j+arr[0]){
 		for(int i=0;i<n;i++){
 			if(j%arr[i]==0){
