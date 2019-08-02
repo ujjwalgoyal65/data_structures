@@ -1,16 +1,14 @@
 #include<stdio.h>
-int main()
+#include<stdlib.h>
+int main(int argv,char* argc[])
 {
-	int n,temp,arr[100];
-	printf("enter the elements in array:");
-	scanf("%d",&n);
-	printf("enter the elements of the array:\n");
-	for(int i=0;i<n;i++)
+	int temp,arr[argv-1];
+	for(int i=1;i<argv;i++)
 	{
-		scanf("%d",&arr[i]);
+		arr[i-1]=atoi(argc[i]);
 	}
-	int middle=n/2;
-	int k=n-1;
+	int middle=(argv-1)/2;
+	int k=argv-2;
 	for(int j=0;j<=middle;j++)
 	{
 		temp=arr[j];
@@ -18,7 +16,7 @@ int main()
 		arr[k-j]=temp;
 	}
 	printf("reverse of the array is:\n");
-	for(int i=0;i<n;i++)
+	for(int i=0;i<argv-1;i++)
 	{
 		printf("%d ",arr[i]);
 	}
