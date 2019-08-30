@@ -12,9 +12,10 @@ int main(int argc,char* argv[])
 }
 void randomstring(int a){
 	string str="";
-	srand(time(NULL));
+	srand(time(0));
 	for(int i=0;i<a;i){
-		int n=rand()%1000;
+		int n=rand()%91000;
+		cout<<n<<endl;
 		if((n>=65 && n<=91)||(n>=97 && n<=122)){
 			i++;
 			char ch=n;
